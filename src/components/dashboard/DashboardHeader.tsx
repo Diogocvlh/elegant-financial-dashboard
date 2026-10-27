@@ -5,7 +5,7 @@ const DashboardHeader = () => {
     <header className="flex items-center justify-between border-b border-border px-8 py-4">
       <div>
         <h1 className="font-display text-2xl font-bold text-foreground">Visão Geral</h1>
-        <p className="text-sm text-muted-foreground">Bem-vindo de volta, Carlos</p>
+        <p className="text-sm text-muted-foreground">Demonstração visual com dados fictícios</p>
       </div>
       <div className="flex items-center gap-3">
         <div className="flex h-9 items-center gap-2 rounded-lg bg-secondary px-3">

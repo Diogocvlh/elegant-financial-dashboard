@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  type TooltipProps,
 } from "recharts";
 
 const data = [
@@ -24,12 +25,12 @@ const data = [
   { month: "Dez", receita: 25600, despesa: 12400 },
 ];
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
   if (active && payload && payload.length) {
     return (
       <div className="glass-card rounded-lg px-4 py-3">
         <p className="text-xs font-medium text-muted-foreground mb-2">{label}</p>
-        {payload.map((entry: any, index: number) => (
+        {payload.map((entry, index) => (
           <p key={index} className="text-sm font-semibold" style={{ color: entry.color }}>
             {entry.name}: R$ {entry.value.toLocaleString("pt-BR")}
           </p>
